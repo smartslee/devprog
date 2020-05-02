@@ -1,6 +1,36 @@
 import os
 import youtube_dl
 
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QInputDialog, QApplication
+from PyQt5.QtGui import QIcon
+
+
+class App(QWidget):
+
+    def __init__(self):
+        super().__init__()
+        self.title = 'Main Window'
+        self.left = 300
+        self.top = 300
+        self.width = 640
+        self.height = 480
+        self.initUI()
+
+    def initUI(self):
+        self.setWindowTitle(self.title)
+        self.setGeometry(self.left, self.top, self.width, self.height)
+        self.show()
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    app.aboutToQuit.connect(app.deleteLater)
+    ex = App()
+    sys.exit(app.exec_())
+
+# 여기까지 pyQT 관려 코드
+
 VIDEO_DOWNLOAD_PATH = './musics'  # 다운로드 경로
 
 
