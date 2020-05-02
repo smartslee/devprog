@@ -29,8 +29,9 @@ def download_video_and_subtitle(output_dir, youtube_video_list):
 
 if __name__ == '__main__':
 
+    ss = input("url 주소 적으세요.")
     youtube_url_list = [  # 유투브에서 다운로드 하려는 영상의 주소 리스트(아래는 Sample Video 리스트)
-        "put url this is clinic pc 1, branch add"
+        ss
     ]
     download_video_and_subtitle(VIDEO_DOWNLOAD_PATH, youtube_url_list)
     print('Complete download!')
