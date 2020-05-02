@@ -2,7 +2,7 @@ import os
 import youtube_dl
 
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QInputDialog, QApplication
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit, QInputDialog, QApplication, QInputDialog
 from PyQt5.QtGui import QIcon
 
 
@@ -25,7 +25,8 @@ class App(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    app.aboutToQuit.connect(app.deleteLater)
+    # app.aboutToQuit.connect(app.deleteLater)
+
     ex = App()
     sys.exit(app.exec_())
 
@@ -57,11 +58,11 @@ def download_video_and_subtitle(output_dir, youtube_video_list):
             print('error', e)
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    ss = input("url 주소 적으세요.")
-    youtube_url_list = [  # 유투브에서 다운로드 하려는 영상의 주소 리스트(아래는 Sample Video 리스트)
-        ss
-    ]
-    download_video_and_subtitle(VIDEO_DOWNLOAD_PATH, youtube_url_list)
-    print('Complete download!')
+#    ss = input("url 주소 적으세요.")
+#    youtube_url_list = [  # 유투브에서 다운로드 하려는 영상의 주소 리스트(아래는 Sample Video 리스트)
+#        ss
+#    ]
+#    download_video_and_subtitle(VIDEO_DOWNLOAD_PATH, youtube_url_list)
+#    print('Complete download!')
