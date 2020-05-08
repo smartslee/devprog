@@ -1,6 +1,12 @@
+# coding: utf-8
+
+import os
+import youtube_dl
+
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+from PyQt5.QtCore import *
 
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
@@ -15,11 +21,12 @@ class WindowClass(QMainWindow, form_class):
         self.setupUi(self)
 
         self.pushButton1.clicked.connect(self.button1Function)
-        self.pushButton1.clicked.connect(self.button2Function)
-        # self.LineEdit1.textChanged.connect(lineeditURLFunction)
+        self.pushButton2.clicked.connect(QCoreApplication.instance().quit)
+        #self.pushButton2.clicked.connect(self.button2Function)
+        #self.lineEdit.textChanged.connect(self.lineeditURLFunction)
 
-    def lineeditURLFunction(self):
-        ss = self.LineEdit1.text()
+    #def lineeditURLFunction(self):
+     #       ss = self.lineEdit.text()
 
     def button2Function(self):
         print("btn_2 Clicked")
@@ -50,6 +57,15 @@ class WindowClass(QMainWindow, form_class):
                 except Exception as e:
                     print('error', e)
 
+        if __name__ == "__main__":
+            ss = self.lineEdit.text()
+    #ss = input("url 주소 적으세요.")
+            youtube_url_list = [  # 유투브에서 다운로드 하려는 영상의 주소 리스트(아래는 Sample Video 리스트)
+                    ss
+                ]
+            download_video_and_subtitle(VIDEO_DOWNLOAD_PATH, youtube_url_list)
+            print('Complete download!')
+        
 
 if __name__ == "__main__":
     # QApplication : 프로그램을 실행시켜주는 클래스
@@ -61,12 +77,7 @@ if __name__ == "__main__":
     # 프로그램 화면을 보여주는 코드
     myWindow.show()
 
-    #ss = input("url 주소 적으세요.")
-#    youtube_url_list = [  # 유투브에서 다운로드 하려는 영상의 주소 리스트(아래는 Sample Video 리스트)
-#        ss
-#    ]
-#    download_video_and_subtitle(VIDEO_DOWNLOAD_PATH, youtube_url_list)
-#    print('Complete download!')
+   
 
     # 프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
     sys.exit(app.exec_())
