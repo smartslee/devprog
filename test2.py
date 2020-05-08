@@ -9,6 +9,7 @@ class MyWindow(QDialog, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        #self.label.setText("유튜브 저장 프로그램")
 
 
 if __name__ == "__main__":
