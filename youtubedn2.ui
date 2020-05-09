@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>213</height>
+    <width>676</width>
+    <height>239</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,12 +17,18 @@
    <iconset>
     <normaloff>../../Users/user/Pictures/logo111icon.ico</normaloff>../../Users/user/Pictures/logo111icon.ico</iconset>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>20</y>
+      <y>10</y>
       <width>281</width>
       <height>51</height>
      </rect>
@@ -43,7 +49,7 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>30</y>
+      <y>10</y>
       <width>311</width>
       <height>41</height>
      </rect>
@@ -53,9 +59,9 @@
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>120</y>
-      <width>81</width>
-      <height>31</height>
+      <y>90</y>
+      <width>91</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
@@ -66,13 +72,38 @@
     <property name="geometry">
      <rect>
       <x>530</x>
-      <y>120</y>
+      <y>90</y>
       <width>101</width>
-      <height>31</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string>종료</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>60</y>
+      <width>141</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="midLineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/img1/happy1.PNG</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="openExternalLinks">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
@@ -81,13 +112,15 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>676</width>
      <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
